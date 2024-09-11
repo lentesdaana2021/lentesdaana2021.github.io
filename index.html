@@ -1,11 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfólio de João Silva - Fotografia</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: #000;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .cta-button {
+            background: #ff5722;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .about, .portfolio, .services, .contact {
+            padding: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .gallery-item {
+            flex: 1 1 calc(33.333% - 20px);
+            margin: 10px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style>
 </head>
 <body>
-    oi
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <img src="imagem-destaque.jpg" alt="Imagem de Destaque">
+        <div class="hero-text">
+            <h1>João Silva</h1>
+            <p>Fotografia de Casamento e Retrato</p>
+            <a href="#portfolio" class="cta-button">Ver Portfólio</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <img src="sua-foto.jpg" alt="João Silva">
+        <div class="about-text">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Sou João Silva, um fotógrafo apaixonado por capturar momentos especiais...</p>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Portfólio</h2>
+        <div class="gallery">
+            <div class="gallery-item"><img src="foto1.jpg" alt="Foto 1"></div>
+            <div class="gallery-item"><img src="foto2.jpg" alt="Foto 2"></div>
+            <!-- Mais fotos -->
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Serviços</h2>
+        <p>Ofereço sessões de fotos personalizadas, edição profissional e muito mais...</p>
+        <!-- Detalhes dos serviços -->
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contato</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 João Silva. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="https://facebook.com/seuperfil">Facebook</a>
+            <a href="https://instagram.com/seuperfil">Instagram</a>
+            <!-- Mais redes sociais -->
+        </div>
+    </footer>
 </body>
 </html>
